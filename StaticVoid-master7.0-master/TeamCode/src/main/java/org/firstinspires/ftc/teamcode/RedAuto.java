@@ -129,7 +129,7 @@ public class RedAuto extends LinearOpMode{
         delivery1.setPower(1);
         delivery2.setPower(-1);
         */
-        while(timer.milliseconds() <= 5000)
+        while(timer.milliseconds() < 4999)
             if (!opModeIsActive()) {
                 throw new InterruptedException();
             }
