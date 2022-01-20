@@ -22,7 +22,7 @@ public class BlueAuto extends LinearOpMode{
         drive(.8,100);
         turn(.8,300);
         drive(.8,200);
-        dropDuck(.75,2000)
+        dropDuck();
         turn(.8, 200);
         drive(.8,250);
 
@@ -109,7 +109,7 @@ public class BlueAuto extends LinearOpMode{
         rightBack.setDirection(DcMotorSimple.Direction.FORWARD);
     }
 
-    public void turn(int power, int time) throws InterruptedException {
+    public void turn(double power, int time) throws InterruptedException {
         timer = new ElapsedTime();
         leftFront.setDirection(DcMotorEx.Direction.FORWARD);
         leftBack.setDirection(DcMotorEx.Direction.FORWARD);
