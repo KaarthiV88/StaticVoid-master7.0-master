@@ -12,7 +12,7 @@ import com.qualcomm.robotcore.util.Range;
 @TeleOp
 public class TeleOP extends OpMode {
     private DcMotorEx leftFront, leftBack, rightFront, rightBack, intake, outtake, delivery1, delivery2;
-    private Servo duck, pully;
+    private Servo duckLeft, duckcRight, pully;
     private boolean direction, togglePrecision, reverse;
     private double factor;
     private BNO055IMU imu;
@@ -27,7 +27,8 @@ public class TeleOP extends OpMode {
         delivery1 = (DcMotorEx) hardwareMap.dcMotor.get("delivery1");
         delivery2 = (DcMotorEx) hardwareMap.dcMotor.get("delivery2");
         outtake = (DcMotorEx) hardwareMap.dcMotor.get("outtake");
-        duck = (Servo) hardwareMap.get("duck");
+        duckLeft = (Servo) hardwareMap.get("duckLEFT");
+        duckRight = (Servo) hardwareMap.get("duckRIGHT");
         pully = (Servo) hardwareMap.get("pully");
         //Initialize all the hardware to use Encoders
         leftFront.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
@@ -103,11 +104,14 @@ public class TeleOP extends OpMode {
         else
             pully.setPosition(1);
         if(gamepad1.x && !reverse)
-            duck.setPosition(.7);
+            duckLeft.setPosition(.7);
+            duckRight.setPosition(.7)
         else if(gamepad1.x)
-            duck.setPosition(-.7);
+            duckLeft.setPosition(-.7);
+            duckRight.setPosition(-.7)
         else
-            duck.setPosition(.5);
+            duckLeft.setPosition(.5);
+            duckRight.setPosition(.5)
 
         
 

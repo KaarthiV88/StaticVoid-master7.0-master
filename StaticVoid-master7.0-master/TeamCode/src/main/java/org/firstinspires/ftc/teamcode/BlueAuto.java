@@ -18,14 +18,23 @@ public class BlueAuto extends LinearOpMode{
 
     @Override
     public void runOpMode() throws InterruptedException {
-        initialize();
-        duck.setPosition(.6);
-        strafe(-1, 360);
-        drive(-.6, 900);
-        intakeBox();
-        duck.setPosition(0.5);
-        strafe(-1, 700);
-        pully.setPosition(1);
+        intialize();
+        drive(.8,100);
+        turn(.8,300);
+        drive(.8,200);
+        dropDuck(.75,2000)
+        turn(.8, 200);
+        drive(.8,250);
+
+
+        //initialize();
+        //duck.setPosition(.6);
+        //strafe(-1, 360);
+        //drive(-.6, 900);
+        //intakeBox();
+        //duck.setPosition(0.5);
+        //strafe(-1, 700);
+        //pully.setPosition(1);
 
         /*duck.setPosition(-1);
         drive(1, 300);
